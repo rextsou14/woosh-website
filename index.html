@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══ SEO META ══ -->
+<title>WOOSH! SELECT — 數位口碑整合行銷｜影像製作・廣告投放・口碑操作</title>
+<meta name="description" content="WOOSH! 成立於2015年，是台灣頂尖的數位口碑整合行銷公司。專精影像製作、廣告投放、口碑操作、輿情系統、SaaS廣告監控、網紅媒合、社群維運。服務 300+ 品牌，包含 UNIQLO、KFC、ASUS、PlayStation、統一企業等。">
+<meta name="keywords" content="整合行銷,數位行銷,口碑行銷,廣告投放,影像製作,輿情系統,社群維運,網紅媒合,KOL,SaaS廣告監控,台灣行銷公司,WOOSH">
+<meta name="author" content="WOOSH! SELECT">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://wooshselect.com/">
+
+<!-- ══ OG / SOCIAL ══ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooshselect.com/">
+<meta property="og:title" content="WOOSH! SELECT — 數位口碑整合行銷">
+<meta property="og:description" content="台灣頂尖數位整合行銷公司，專精口碑操作、廣告投放、影像製作、輿情系統。服務 300+ 品牌，ROAS 最高提升 233%。">
+<meta property="og:image" content="https://wooshselect.com/og-image.jpg">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="WOOSH! SELECT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WOOSH! SELECT — 數位口碑整合行銷">
+<meta name="twitter:description" content="台灣頂尖數位整合行銷公司，專精口碑操作、廣告投放、影像製作、輿情系統。">
+
+<!-- ══ SCHEMA 結構化資料 ══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MarketingAgency",
+  "name": "WOOSH! SELECT",
+  "alternateName": "WOOSH!",
+  "description": "台灣數位口碑整合行銷公司，專精影像製作、廣告投放、口碑操作、輿情系統、SaaS廣告監控、網紅媒合、社群維運",
+  "url": "https://wooshselect.com",
+  "foundingDate": "2015",
+  "sameAs": ["https://www.facebook.com/wooshselect"],
+  "areaServed": {"@type": "Country", "name": "Taiwan"},
+  "serviceType": ["數位行銷","口碑行銷","廣告投放","影像製作","社群行銷","輿情監控"],
+  "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 10},
+  "knowsAbout": ["Digital Marketing","Content Marketing","Social Media Marketing","Influencer Marketing","Video Production","SEO","Reputation Management"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ══ RESET & ROOT ══ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#C8181F;--red2:#e8222a;
+  --black:#060606;--dark:#0d0d0d;--dark2:#141414;--dark3:#1c1c1c;
+  --white:#fff;
+  --pad:4rem;        /* desktop padding */
+  --pad-m:1.4rem;    /* mobile padding */
+}
+html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
+body{
+  background:var(--black);color:var(--white);
+  font-family:'Noto Sans TC',sans-serif;font-weight:300;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* grain */
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:8000;opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px;
+}
+
+/* ── CURSOR (desktop only) ── */
+@media(hover:hover){
+  body{cursor:none}
+  .cur{position:fixed;pointer-events:none;z-index:9999;top:0;left:0;will-change:transform}
+  .cur-dot{position:absolute;width:6px;height:6px;background:var(--red);border-radius:50%;transform:translate(-50%,-50%)}
+  .cur-ring{position:fixed;top:0;left:0;width:36px;height:36px;border:1px solid rgba(200,24,31,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s}
+}
+
+/* ══ NAV ══ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  padding:1.2rem var(--pad);
+  display:flex;align-items:center;justify-content:space-between;
+}
+nav::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,6,6,.97) 0%,transparent 100%);pointer-events:none}
+.nav-logo{position:relative;z-index:1;text-decoration:none;display:flex;align-items:center}
+.nav-logo img{height:34px;width:auto}
+.nav-links{position:relative;z-index:1;display:flex;gap:1.8rem;list-style:none}
+.nav-links a{
+  color:rgba(255,255,255,.42);text-decoration:none;
+  font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;transition:color .2s;
+  white-space:nowrap;
+}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{
+  position:relative;z-index:1;
+  background:transparent;color:var(--white);
+  border:1px solid rgba(200,24,31,.6);
+  padding:.48rem 1.3rem;
+  font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;
+  transition:all .25s;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--red);border-color:var(--red)}
+
+/* 漢堡 — mobile only */
+.nav-burger{
+  display:none;position:relative;z-index:1;
+  background:none;border:none;width:36px;height:36px;
+  flex-direction:column;justify-content:center;align-items:center;gap:5px;
+}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--white);transition:all .3s}
+.nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* mobile menu drawer */
+.nav-drawer{
+  display:none;position:fixed;inset:0;z-index:400;
+  background:rgba(6,6,6,.98);
+  flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;
+  opacity:0;transition:opacity .3s;
+}
+.nav-drawer.open{opacity:1}
+.nav-drawer a{
+  font-family:'Bebas Neue',sans-serif;font-size:2.4rem;
+  color:rgba(255,255,255,.6);text-decoration:none;letter-spacing:.05em;
+  transition:color .2s;
+}
+.nav-drawer a:hover{color:var(--white)}
+.nav-drawer .drawer-cta{
+  margin-top:1rem;background:var(--red);color:var(--white);
+  font-family:'Barlow Condensed',sans-serif;font-size:.88rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;
+  padding:.75rem 2.5rem;border:none;
+}
+
+/* ══ SHARED ══ */
+.s-eyebrow{
+  display:flex;align-items:center;gap:.7rem;
+  font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--red);margin-bottom:.9rem;
+}
+.s-eyebrow::after{content:'';flex:0 0 26px;height:1px;background:var(--red)}
+.s-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,5vw,4.8rem);line-height:1;letter-spacing:.02em}
+.fi{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.fi.v{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.28s}.d4{transition-delay:.38s}
+.wm{pointer-events:none;user-select:none;font-family:'Bebas Neue',sans-serif;color:rgba(200,24,31,.04);line-height:1;position:absolute}
+.btn-fill{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:var(--red);color:var(--white);border:none;
+  padding:.7rem 1.8rem;
+  font-family:'Barlow Condensed',sans-serif;font-size:.82rem;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;
+  text-decoration:none;transition:background .2s;white-space:nowrap;
+}
+.btn-fill:hover{background:var(--red2)}
+.btn-line{
+  display:inline-flex;align-items:center;gap:.5rem;
+  color:rgba(255,255,255,.38);
+  font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:600;
+  letter-spacing:.15em;text-transform:uppercase;
+  text-decoration:none;border-bottom:1px solid rgba(255,255,255,.12);
+  transition:all .2s;white-space:nowrap;
+}
+.btn-line:hover{color:var(--white);border-bottom-color:rgba(255,255,255,.4)}
+
+/* ══ HERO ══ */
+#hero{
+  min-height:100svh;display:flex;align-items:flex-end;
+  padding:0 var(--pad) 5.5rem;
+  position:relative;overflow:hidden;background:var(--black);
+}
+.hero-lines{position:absolute;inset:0;opacity:.035;background-image:repeating-linear-gradient(125deg,var(--white) 0,var(--white) 1px,transparent 1px,transparent 60px)}
+.hero-slab{position:absolute;right:0;top:0;bottom:0;width:38%;background:var(--red);clip-path:polygon(18% 0,100% 0,100% 100%,0 100%);opacity:.06}
+.hero-wm{position:absolute;right:-3%;bottom:-8%;font-size:28vw;letter-spacing:-.02em;color:rgba(255,255,255,.025)}
+.hero-content{position:relative;z-index:2;max-width:820px;width:100%}
+.hero-eyebrow{
+  display:flex;align-items:center;gap:.9rem;
+  font-family:'Barlow Condensed',sans-serif;font-size:.63rem;font-weight:700;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--red);margin-bottom:1.8rem;
+  animation:su .8s ease .3s both;
+}
+.hero-eyebrow i{display:block;width:40px;height:1px;background:var(--red);flex-shrink:0}
+h1.hero-h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(4.5rem,13vw,12rem);
+  line-height:.88;letter-spacing:-.01em;
+  animation:su .9s ease .5s both;
+}
+.hero-h1 .outline{-webkit-text-stroke:1px rgba(255,255,255,.12);color:transparent}
+.hero-h1 .accent{color:var(--red)}
+.hero-sub{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:flex-end;margin-top:2.2rem;animation:su .9s ease .8s both}
+.hero-desc{font-size:.95rem;line-height:1.85;color:rgba(255,255,255,.45);max-width:380px}
+.hero-desc strong{color:rgba(255,255,255,.85);font-weight:400}
+.hero-ctas{display:flex;flex-direction:column;gap:.8rem;align-items:flex-end}
+.hero-float-stats{
+  position:absolute;right:var(--pad);top:50%;transform:translateY(-50%);
+  z-index:2;display:flex;flex-direction:column;gap:1.8rem;text-align:right;
+  animation:fadeIn 1s ease 1.2s both;
+}
+.hstat-n{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;line-height:1}
+.hstat-n em{color:var(--red);font-style:normal}
+.hstat-l{font-family:'Barlow Condensed',sans-serif;font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-top:.1rem}
+
+@keyframes su{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* ══ MARQUEE ══ */
+.mq{overflow:hidden;background:var(--red);padding:.82rem 0}
+.mq-track{display:flex;animation:mqroll 24s linear infinite;white-space:nowrap}
+.mq-track:hover{animation-play-state:paused}
+.mqi{display:flex;align-items:center;gap:1.4rem;padding:0 1.4rem;flex-shrink:0;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.1em;color:rgba(0,0,0,.75)}
+.mqi b{color:rgba(0,0,0,.3);font-weight:400}
+@keyframes mqroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ══ ABOUT ══ */
+#about{position:relative;overflow:hidden;background:var(--dark)}
+#about .wm{left:-2%;top:50%;transform:translateY(-50%);font-size:20vw;white-space:nowrap}
+.about-wrap{display:grid;grid-template-columns:5fr 4fr;min-height:100vh;position:relative;z-index:1}
+.about-left{padding:8rem var(--pad);display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,255,255,.05)}
+.about-copy{font-size:.92rem;color:rgba(255,255,255,.48);line-height:1.95;margin-top:1.8rem}
+.about-copy strong{color:var(--white);font-weight:400}
+.about-founded{margin-top:3rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:2rem}
+.fn{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:var(--red);line-height:1}
+.ft{font-size:.78rem;color:rgba(255,255,255,.3);line-height:1.75}
+.about-right{display:grid;grid-template-rows:1fr 1fr 1fr}
+.about-card{padding:2.8rem 2.5rem;border-bottom:1px solid rgba(255,255,255,.04);position:relative;overflow:hidden;transition:background .3s}
+.about-card:last-child{border-bottom:none}
+.about-card:hover{background:rgba(255,255,255,.02)}
+.about-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transform-origin:bottom;transition:transform .4s}
+.about-card:hover::before{transform:scaleY(1)}
+.ac-label{font-family:'Barlow Condensed',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(200,24,31,.7);margin-bottom:.6rem}
+.ac-title{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:.6rem;letter-spacing:.03em}
+.ac-body{font-size:.8rem;color:rgba(255,255,255,.35);line-height:1.75}
+.ac-deco{position:absolute;right:1.5rem;bottom:.5rem;font-family:'Bebas Neue',sans-serif;font-size:5rem;color:rgba(255,255,255,.03);line-height:1;pointer-events:none}
+
+/* ══ RESULTS ══ */
+#results{padding:7rem var(--pad);background:var(--black);position:relative;overflow:hidden}
+#results .wm{right:-5%;top:50%;transform:translateY(-50%);font-size:18vw}
+.res-layout{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(255,255,255,.05);margin-top:3.5rem;position:relative;z-index:1}
+.rc{background:var(--dark2);padding:2.5rem 2.2rem;position:relative;overflow:hidden;transition:background .3s}
+.rc:hover{background:#191919}
+.rc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.rc:hover::before{transform:scaleX(1)}
+.rc.hero-card{grid-column:span 2;background:var(--dark3);padding:3rem 2.8rem}
+.rc-svc{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:rgba(200,24,31,.8);margin-bottom:1.2rem}
+.rc-big{font-family:'Bebas Neue',sans-serif;font-size:3.8rem;line-height:1;margin-bottom:.5rem}
+.rc.hero-card .rc-big{font-size:5rem}
+.rc-big em{color:var(--red);font-style:normal}
+.rc-label{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:1.2rem}
+.rc-story{font-size:.75rem;color:rgba(255,255,255,.28);line-height:1.75;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.05)}
+
+/* ══ SERVICES ══ */
+#services{background:var(--dark);padding:7rem 0 7rem var(--pad);overflow:hidden}
+.svc-head{padding-right:var(--pad);margin-bottom:3rem;display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:flex-end}
+.svc-blurb{font-size:.88rem;color:rgba(255,255,255,.4);line-height:1.85;max-width:400px;border-left:1px solid rgba(255,255,255,.07);padding-left:1.8rem}
+.svc-scroll{display:flex;gap:1px;overflow-x:auto;scrollbar-width:none;padding-right:var(--pad);background:rgba(255,255,255,.04);cursor:grab}
+.svc-scroll::-webkit-scrollbar{display:none}
+.svc-scroll:active{cursor:grabbing}
+.sv{flex:0 0 250px;background:var(--dark2);padding:2rem 1.8rem 2.5rem;position:relative;overflow:hidden;transition:background .3s,flex-basis .4s}
+.sv:hover{background:#1b1b1b;flex-basis:290px}
+.sv::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.sv:hover::after{transform:scaleX(1)}
+.sv-icon{width:30px;height:30px;stroke:var(--red);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1.3rem;opacity:.85}
+.sv-num{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:rgba(200,24,31,.07);line-height:1;position:absolute;right:1rem;top:.6rem;pointer-events:none}
+.sv-name{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--white);margin-bottom:.3rem}
+.sv-zh{font-size:.73rem;color:rgba(255,255,255,.3);letter-spacing:.05em;margin-bottom:.8rem}
+.sv-desc{font-size:.76rem;color:rgba(255,255,255,.38);line-height:1.75}
+.sv-result{margin-top:.9rem;padding-top:.9rem;border-top:1px solid rgba(255,255,255,.05);font-family:'Barlow Condensed',sans-serif;font-size:.78rem;color:rgba(255,255,255,.5)}
+.sv-result strong{color:var(--red)}
+.sv-badge{display:inline-block;margin-top:.8rem;border:1px solid rgba(200,24,31,.35);color:rgba(200,24,31,.85);font-family:'Barlow Condensed',sans-serif;font-size:.54rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:.18rem .55rem}
+.svc-hint{margin-top:1.5rem;padding-right:var(--pad);font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.18);display:flex;align-items:center;gap:.5rem}
+.svc-hint::before{content:'';width:20px;height:1px;background:rgba(255,255,255,.18)}
+
+/* ══ SUBSCRIPTION ══ */
+#subscription{background:var(--black);padding:7rem var(--pad);position:relative;overflow:hidden}
+#subscription .wm{left:-3%;bottom:-10%;font-size:16vw}
+.sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.05);margin-top:3.5rem;position:relative;z-index:1}
+.sub-panel{background:var(--dark2);padding:3rem 2.5rem;position:relative;overflow:hidden}
+.sub-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red)}
+.sub-chip{display:inline-flex;align-items:center;gap:.5rem;font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(200,24,31,.8);border:1px solid rgba(200,24,31,.25);padding:.28rem .8rem;margin-bottom:1.4rem}
+.sub-title{font-family:'Bebas Neue',sans-serif;font-size:2.1rem;margin-bottom:.4rem;line-height:1}
+.sub-sub{font-size:.8rem;color:rgba(255,255,255,.38);line-height:1.65;margin-bottom:1.8rem}
+.sub-feats{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.8rem}
+.sub-feat{display:flex;align-items:flex-start;gap:.75rem;font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.5}
+.feat-check{width:13px;height:13px;stroke:var(--red);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:.18rem}
+.sub-plans{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,.04);margin-bottom:1.8rem}
+.sub-plan{display:flex;align-items:center;justify-content:space-between;padding:.6rem 1rem;background:var(--dark3);font-size:.76rem;color:rgba(255,255,255,.45)}
+.sub-plan strong{color:rgba(255,255,255,.75);font-weight:400}
+.sub-plan-tag{font-family:'Barlow Condensed',sans-serif;font-size:.66rem;color:var(--red);letter-spacing:.05em}
+.sub-cta{display:inline-flex;align-items:center;gap:.5rem;font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--red);text-decoration:none;border-bottom:1px solid rgba(200,24,31,.3);padding-bottom:.15rem;transition:all .2s}
+.sub-cta:hover{border-bottom-color:var(--red2);color:var(--red2)}
+
+/* ══ CASES ══ */
+#cases{background:var(--dark);padding:7rem var(--pad) 5rem}
+.cases-bar{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;flex-wrap:wrap;gap:1.5rem}
+.filt{display:flex;gap:.35rem;flex-wrap:wrap}
+.fb{background:transparent;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.35);padding:.36rem .9rem;font-family:'Barlow Condensed',sans-serif;font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:all .2s}
+.fb.on,.fb:hover{background:var(--red);border-color:var(--red);color:var(--white)}
+.cg{display:grid;grid-template-columns:repeat(12,1fr);gap:1px;background:rgba(255,255,255,.04)}
+.cc{position:relative;overflow:hidden;background:var(--dark3);transition:opacity .4s,transform .4s}
+.cc:nth-child(1){grid-column:span 7;min-height:440px}
+.cc:nth-child(2){grid-column:span 5;min-height:440px}
+.cc:nth-child(3){grid-column:span 5;min-height:300px}
+.cc:nth-child(4){grid-column:span 4;min-height:300px}
+.cc:nth-child(5){grid-column:span 3;min-height:300px}
+.cc-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.32) saturate(.6);transition:transform .65s,filter .4s}
+.cc:hover .cc-bg{transform:scale(1.07);filter:brightness(.15) saturate(.4)}
+.cc-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:1.8rem}
+.cc-tag{display:inline-block;align-self:flex-start;background:var(--red);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.2rem .6rem;margin-bottom:.6rem}
+.cc-title{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;line-height:1.2;margin-bottom:.4rem}
+.cc:nth-child(1) .cc-title{font-size:1.9rem}
+.cc-reveal{font-size:.7rem;color:rgba(255,255,255,.32);line-height:1.65;max-height:0;overflow:hidden;opacity:0;transition:max-height .45s,opacity .35s}
+.cc:hover .cc-reveal{max-height:90px;opacity:1}
+.cc-kpi{display:inline-block;margin-top:.5rem;background:var(--red);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;padding:.18rem .65rem}
+.cc-meta{font-size:.62rem;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:.08em;margin-top:.4rem}
+.cc-arrow{position:absolute;top:1.2rem;right:1.2rem;width:32px;height:32px;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:.8rem;opacity:0;transform:translate(5px,-5px);transition:all .3s}
+.cc:hover .cc-arrow{opacity:1;transform:translate(0,0)}
+
+/* ══ CLIENTS ══ */
+#clients{background:var(--black);padding:6rem 0}
+.cl-head{padding:0 var(--pad) 3rem}
+.cl-track-wrap{overflow:hidden;position:relative}
+.cl-track-wrap::before,.cl-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}
+.cl-track-wrap::before{left:0;background:linear-gradient(90deg,var(--black),transparent)}
+.cl-track-wrap::after{right:0;background:linear-gradient(-90deg,var(--black),transparent)}
+.cl-row{display:flex;gap:1px;background:rgba(255,255,255,.04);margin-bottom:1px}
+.cl-row.rev .cl-inner{animation-direction:reverse}
+.cl-inner{display:flex;animation:clroll 30s linear infinite;white-space:nowrap}
+.cl-inner:hover{animation-play-state:paused}
+.cl-cell{flex:0 0 170px;background:var(--dark2);display:flex;align-items:center;justify-content:center;padding:1.2rem;min-height:68px;transition:background .3s}
+.cl-cell:hover{background:#1c1c1c}
+.cl-name{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.22);text-align:center;transition:color .3s;line-height:1.3}
+.cl-cell:hover .cl-name{color:rgba(255,255,255,.65)}
+@keyframes clroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.cl-note{padding:1.5rem var(--pad) 0;font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em}
+
+/* ══ SOCIAL ══ */
+#social{background:var(--dark);padding:7rem var(--pad)}
+.social-bar{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1rem}
+.fb-btn{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:rgba(255,255,255,.4);font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border:1px solid rgba(255,255,255,.1);padding:.5rem 1.1rem;transition:all .2s}
+.fb-btn:hover{background:rgba(255,255,255,.04);color:var(--white)}
+.fb-btn svg{width:13px;height:13px;fill:currentColor}
+.soc-grid{display:grid;grid-template-columns:2fr 1.5fr 1fr;gap:1px;background:rgba(255,255,255,.04);margin-bottom:1px}
+.fbp{background:var(--dark2);overflow:hidden;position:relative;display:flex;flex-direction:column}
+.fbp-thumb{width:100%;background-size:cover;background-position:center;filter:saturate(.55) brightness(.75);transition:all .45s;flex-shrink:0}
+.fbp:nth-child(1) .fbp-thumb{aspect-ratio:3/2}
+.fbp:nth-child(2) .fbp-thumb{aspect-ratio:4/3}
+.fbp:nth-child(3) .fbp-thumb{aspect-ratio:1}
+.fbp:hover .fbp-thumb{filter:saturate(1) brightness(.55);transform:scale(1.05)}
+.fbp-tint{position:absolute;top:0;left:0;right:0;bottom:105px;background:var(--red);opacity:0;mix-blend-mode:color;transition:opacity .35s;pointer-events:none}
+.fbp:hover .fbp-tint{opacity:.45}
+.fbp-meta{padding:1rem 1.2rem;border-top:1px solid rgba(255,255,255,.04)}
+.fbp-date{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:.3rem}
+.fbp-text{font-size:.75rem;color:rgba(255,255,255,.45);line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.soc-cta{background:var(--dark3);display:flex;align-items:center;justify-content:space-between;padding:1.5rem 1.8rem;flex-wrap:wrap;gap:1rem}
+.soc-page{display:flex;align-items:center;gap:1rem}
+.soc-ava{width:42px;height:42px;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;flex-shrink:0}
+.soc-pn{font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.04em}
+.soc-ph{font-size:.68rem;color:rgba(255,255,255,.28);margin-top:.1rem}
+.soc-note{margin-top:2rem;font-size:.7rem;color:rgba(255,255,255,.18);border-left:1px solid rgba(200,24,31,.35);padding-left:1rem;line-height:1.7}
+
+/* ══ PROCESS (紅底) ══ */
+#process{background:var(--red);padding:6rem var(--pad);position:relative;overflow:hidden}
+#process .wm{right:-3%;top:50%;transform:translateY(-50%);font-size:20vw;color:rgba(0,0,0,.1)}
+.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:4rem;position:relative;z-index:1}
+.ps{padding:0 2.2rem;border-left:1px solid rgba(0,0,0,.12)}
+.ps-n{font-family:'Bebas Neue',sans-serif;font-size:3.8rem;color:rgba(0,0,0,.15);line-height:1;margin-bottom:1.2rem}
+.ps-t{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#000;margin-bottom:.6rem}
+.ps-d{font-size:.78rem;color:rgba(0,0,0,.55);line-height:1.75}
+
+/* ══ CONTACT ══ */
+#contact{background:var(--dark);padding:7rem var(--pad);position:relative;overflow:hidden}
+#contact::after{content:'';position:absolute;right:-200px;bottom:-200px;width:500px;height:500px;border-radius:50%;background:var(--red);opacity:.05;pointer-events:none}
+.c-hook{background:var(--dark3);border:1px solid rgba(200,24,31,.2);padding:1.3rem 1.8rem;display:flex;align-items:center;justify-content:space-between;margin-bottom:4rem;flex-wrap:wrap;gap:1rem}
+.c-hook-l{display:flex;align-items:center;gap:1rem}
+.c-hook-icon{width:18px;height:18px;stroke:var(--red);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.c-hook-text{font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.06em;color:var(--white)}
+.c-hook-badge{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(200,24,31,.4);color:rgba(200,24,31,.85);padding:.3rem .9rem;white-space:nowrap}
+.cg2{display:grid;grid-template-columns:5fr 7fr;gap:5rem;align-items:start;position:relative;z-index:1}
+.c-pitch{font-size:.9rem;color:rgba(255,255,255,.42);line-height:1.9;margin-top:1.4rem;margin-bottom:2rem}
+.ci-row{display:flex;gap:1.2rem;padding:.9rem 0;border-top:1px solid rgba(255,255,255,.05);font-size:.78rem;color:rgba(255,255,255,.42)}
+.ci-row:last-child{border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-key{font-family:'Barlow Condensed',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.18);min-width:65px;padding-top:.1rem}
+.ci-val a{color:rgba(255,255,255,.42);text-decoration:none;transition:color .2s}
+.ci-val a:hover{color:var(--red)}
+.cform{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,.04)}
+.fr{background:var(--dark2)}
+.fl{display:block;padding:.85rem 1.3rem .3rem;font-family:'Barlow Condensed',sans-serif;font-size:.54rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.2)}
+.fr input,.fr textarea{width:100%;background:transparent;border:none;color:var(--white);padding:.55rem 1.3rem 1rem;font-family:'Noto Sans TC',sans-serif;font-size:.85rem;font-weight:300;outline:none;resize:none;transition:background .2s}
+.fr input::placeholder,.fr textarea::placeholder{color:rgba(255,255,255,.18)}
+.fr:focus-within{background:#1a1a1a}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.04)}
+.csub{background:var(--red);border:none;color:var(--white);width:100%;padding:1.2rem 1.8rem;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;justify-content:space-between;transition:background .2s}
+.csub:hover{background:var(--red2)}
+.csub-note{background:var(--dark3);padding:.65rem 1.3rem;font-size:.68rem;color:rgba(255,255,255,.22);display:flex;align-items:center;gap:.5rem}
+.note-star{width:12px;height:12px;stroke:var(--red);stroke-width:1.5;fill:none;flex-shrink:0}
+
+/* ══ FOOTER ══ */
+footer{background:var(--black);padding:2.5rem var(--pad);border-top:1px solid rgba(255,255,255,.05);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem}
+.f-logo img{height:28px;width:auto}
+.f-copy{font-size:.62rem;color:rgba(255,255,255,.18);letter-spacing:.06em;text-align:center}
+.f-links{display:flex;gap:1.5rem}
+.f-links a{color:rgba(255,255,255,.25);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;transition:color .2s}
+.f-links a:hover{color:var(--red)}
+
+/* ══ BTT ══ */
+.btt{position:fixed;bottom:2rem;right:2rem;z-index:300;width:40px;height:40px;background:transparent;border:1px solid rgba(200,24,31,.4);color:rgba(200,24,31,.8);font-size:.9rem;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s,background .2s}
+.btt:hover{background:var(--red);color:var(--white)}
+.btt.show{opacity:1;pointer-events:all}
+
+/* ════════════════════════════
+   ══ MOBILE RWD ══
+   Breakpoint: 768px
+════════════════════════════ */
+@media(max-width:768px){
+  :root{--pad:var(--pad-m)}
+
+  /* cursor off on touch */
+  .cur,.cur-ring{display:none}
+  body{cursor:auto}
+  button,a{cursor:pointer}
+
+  /* NAV */
+  nav{padding:1rem var(--pad-m)}
+  .nav-links,.nav-cta{display:none}
+  .nav-burger{display:flex}
+  .nav-drawer{display:flex}
+  .nav-drawer.open{pointer-events:all}
+
+  /* HERO */
+  #hero{padding:0 var(--pad-m) 4rem;min-height:100svh;align-items:flex-end}
+  .hero-eyebrow{font-size:.58rem;margin-bottom:1.2rem}
+  .hero-eyebrow i{width:28px}
+  h1.hero-h1{font-size:clamp(3.8rem,16vw,6rem)}
+  .hero-sub{grid-template-columns:1fr;gap:1.5rem}
+  .hero-desc{max-width:100%;font-size:.88rem}
+  .hero-ctas{align-items:flex-start;flex-direction:row;flex-wrap:wrap;gap:.7rem}
+  .hero-float-stats{display:none}
+  .hero-slab{display:none}
+  .hero-wm{font-size:40vw;right:-5%;bottom:-3%}
+
+  /* ABOUT */
+  .about-wrap{grid-template-columns:1fr;min-height:auto}
+  .about-left{padding:5rem var(--pad-m) 3rem;border-right:none;border-bottom:1px solid rgba(255,255,255,.05)}
+  .about-copy{font-size:.88rem}
+  .about-founded{gap:1.2rem}
+  .fn{font-size:3rem}
+  .about-right{grid-template-rows:auto;border-top:1px solid rgba(255,255,255,.04)}
+  .about-card{padding:1.8rem var(--pad-m)}
+  .ac-deco{display:none}
+  #about .wm{display:none}
+
+  /* RESULTS */
+  #results{padding:5rem var(--pad-m)}
+  .res-layout{grid-template-columns:1fr;grid-template-rows:auto}
+  .rc.hero-card{grid-column:span 1}
+  .rc.hero-card .rc-big{font-size:3.5rem}
+  .rc-big{font-size:2.8rem}
+  #results .wm{display:none}
+
+  /* SERVICES */
+  #services{padding:5rem 0 5rem var(--pad-m)}
+  .svc-head{grid-template-columns:1fr;gap:1rem;padding-right:var(--pad-m);margin-bottom:2rem}
+  .svc-blurb{border-left:none;padding-left:0;max-width:100%}
+  .sv{flex:0 0 220px}
+  .sv:hover{flex-basis:220px}
+  .svc-hint{padding-right:var(--pad-m)}
+
+  /* SUBSCRIPTION */
+  #subscription{padding:5rem var(--pad-m)}
+  .sub-grid{grid-template-columns:1fr}
+  #subscription .wm{display:none}
+
+  /* CASES */
+  #cases{padding:5rem var(--pad-m) 4rem}
+  .cg{grid-template-columns:1fr}
+  .cc:nth-child(1),.cc:nth-child(2),.cc:nth-child(3),.cc:nth-child(4),.cc:nth-child(5){grid-column:span 1;min-height:260px}
+  .cc:nth-child(1){min-height:320px}
+  .cc-title{font-size:1.2rem}
+  .cc:nth-child(1) .cc-title{font-size:1.5rem}
+  /* 手機 hover → active */
+  .cc-reveal{max-height:none!important;opacity:1!important}
+  .cc-arrow{opacity:1;transform:translate(0,0)}
+
+  /* CLIENTS */
+  #clients{padding:4rem 0}
+  .cl-head{padding:0 var(--pad-m) 2rem}
+  .cl-cell{flex:0 0 140px;min-height:58px}
+  .cl-name{font-size:.7rem}
+
+  /* SOCIAL */
+  #social{padding:5rem var(--pad-m)}
+  .soc-grid{grid-template-columns:1fr}
+  .fbp:nth-child(1) .fbp-thumb,
+  .fbp:nth-child(2) .fbp-thumb,
+  .fbp:nth-child(3) .fbp-thumb{aspect-ratio:16/9}
+  .fbp-tint{bottom:90px}
+  .soc-cta{flex-direction:column;align-items:flex-start}
+
+  /* PROCESS */
+  #process{padding:5rem var(--pad-m)}
+  .proc-steps{grid-template-columns:1fr 1fr;gap:2rem 0;margin-top:3rem}
+  .ps{padding:0 1.5rem}
+  #process .wm{display:none}
+
+  /* CONTACT */
+  #contact{padding:5rem var(--pad-m)}
+  .c-hook{flex-direction:column;align-items:flex-start}
+  .cg2{grid-template-columns:1fr;gap:3rem}
+  .fr2{grid-template-columns:1fr}
+  #contact::after{display:none}
+
+  /* FOOTER */
+  footer{grid-template-columns:1fr;text-align:center;gap:1.2rem;padding:2rem var(--pad-m)}
+  .f-logo{display:flex;justify-content:center}
+  .f-links{justify-content:center;flex-wrap:wrap;gap:1rem}
+
+  /* BTT */
+  .btt{bottom:1.5rem;right:1.5rem;width:36px;height:36px;font-size:.8rem}
+}
+
+/* 小手機補強 */
+@media(max-width:375px){
+  h1.hero-h1{font-size:3.5rem}
+  .proc-steps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- 自訂游標 (desktop) -->
+<div class="cur" id="cur" aria-hidden="true"><div class="cur-dot"></div></div>
+<div class="cur-ring" id="curRing" aria-hidden="true"></div>
+
+<!-- ══ NAV ══ -->
+<nav role="navigation" aria-label="主選單">
+  <a class="nav-logo" href="#hero" aria-label="WOOSH! SELECT 首頁">
+    <img src="/favicon.png" alt="WOOSH! SELECT Logo" width="34" height="34">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">關於</a></li>
+    <li><a href="#results">成效</a></li>
+    <li><a href="#services">服務</a></li>
+    <li><a href="#subscription">訂閱制</a></li>
+    <li><a href="#cases">案例</a></li>
+    <li><a href="#clients">客戶</a></li>
+    <li><a href="#social">社群</a></li>
+    <li><a href="#contact">聯絡</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" aria-label="免費品牌健檢">免費品牌健檢</button>
+  <!-- 漢堡選單 -->
+  <button class="nav-burger" id="burger" aria-label="開啟選單" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="nav-drawer" id="drawer" role="dialog" aria-modal="true" aria-label="導覽選單">
+  <a href="#about" class="drawer-link">關於我們</a>
+  <a href="#results" class="drawer-link">成效數字</a>
+  <a href="#services" class="drawer-link">服務項目</a>
+  <a href="#subscription" class="drawer-link">訂閱制</a>
+  <a href="#cases" class="drawer-link">精選案例</a>
+  <a href="#clients" class="drawer-link">合作客戶</a>
+  <a href="#social" class="drawer-link">社群動態</a>
+  <a href="#contact" class="drawer-link">聯絡我們</a>
+  <button class="drawer-cta" onclick="closeDrawer();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">免費品牌健檢</button>
+</div>
+
+<!-- ══ HERO ══ -->
+<section id="hero" aria-label="首頁主視覺">
+  <div class="hero-lines" aria-hidden="true"></div>
+  <div class="hero-slab" aria-hidden="true"></div>
+  <div class="hero-wm wm" aria-hidden="true">W!</div>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><i aria-hidden="true"></i>數位媒體整合行銷 · Since 2015</div>
+    <h1 class="hero-h1">WOOSH<span class="accent">!</span><br><span class="outline">SELECT</span></h1>
+    <div class="hero-sub">
+      <p class="hero-desc">我們是數位媒體界的<strong>游擊隊</strong>。<br>用數據說故事，用工具唱歌，<br>讓品牌說 WOOSH 就飛上天。</p>
+      <div class="hero-ctas">
+        <a class="btn-fill" href="#results">看我們的成效 →</a>
+        <a class="btn-line" href="#cases">精選案例</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-float-stats" aria-hidden="true">
+    <div><div class="hstat-n">9<em>年</em></div><div class="hstat-l">深耕數位行銷</div></div>
+    <div><div class="hstat-n">300<em>+</em></div><div class="hstat-l">合作品牌</div></div>
+    <div><div class="hstat-n">8<em>項</em></div><div class="hstat-l">核心服務</div></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq" aria-hidden="true">
+  <div class="mq-track">
+    <div class="mqi">影像製作<b>◆</b></div><div class="mqi">廣告投放<b>◆</b></div><div class="mqi">口碑操作<b>◆</b></div><div class="mqi">輿情系統<b>◆</b></div><div class="mqi">SaaS 監控<b>◆</b></div><div class="mqi">網紅媒合<b>◆</b></div><div class="mqi">社群維運<b>◆</b></div><div class="mqi">媒體媒合<b>◆</b></div>
+    <div class="mqi">影像製作<b>◆</b></div><div class="mqi">廣告投放<b>◆</b></div><div class="mqi">口碑操作<b>◆</b></div><div class="mqi">輿情系統<b>◆</b></div><div class="mqi">SaaS 監控<b>◆</b></div><div class="mqi">網紅媒合<b>◆</b></div><div class="mqi">社群維運<b>◆</b></div><div class="mqi">媒體媒合<b>◆</b></div>
+  </div>
+</div>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" aria-labelledby="about-h">
+  <div class="wm" aria-hidden="true">WOOSH!</div>
+  <div class="about-wrap">
+    <div class="about-left">
+      <div class="s-eyebrow fi">About WOOSH!</div>
+      <h2 class="s-h fi d1" id="about-h">我們是<br><span style="color:var(--red)">游擊隊</span><br>不是廣告商</h2>
+      <p class="about-copy fi d2">
+        WOOSH! 成立於 <strong>2015 年</strong>，名字靈感來自美漫中的速度狀聲詞。<br><br>
+        我們不是那種「只會丟數據的行銷人」，而是<strong>用數據說故事、用工具唱歌</strong>的創意團隊。專攻數位廣告代操、內容創意產出，以及品牌口碑塑造，讓客戶的品牌像明星一樣閃耀。<br><br>
+        不管是流量還是品牌好感度，我們都能用最速配的方案讓行銷夢想說 WOOSH 就飛上天——有時也順便帶點煙火效果。
+      </p>
+      <div class="about-founded fi d3">
+        <div class="fn">2015</div>
+        <div class="ft">成立年份<br>9 年深耕，橫跨電商、消費品<br>餐飲、科技、金融各產業</div>
+      </div>
+    </div>
+    <div class="about-right fi d2">
+      <div class="about-card">
+        <div class="ac-label">Mission</div>
+        <div class="ac-title">我們的使命</div>
+        <div class="ac-body">讓每一個品牌在數位洪流中找到自己的頻率，以最速配的方案飛上天。</div>
+        <div class="ac-deco" aria-hidden="true">01</div>
+      </div>
+      <div class="about-card">
+        <div class="ac-label">Approach</div>
+        <div class="ac-title">我們的方法</div>
+        <div class="ac-body">數據驅動決策，創意放大聲量。不只丟報表，而是幫你看懂數字背後的故事，讓每一分預算花在刀口上。</div>
+        <div class="ac-deco" aria-hidden="true">02</div>
+      </div>
+      <div class="about-card">
+        <div class="ac-label">Edge</div>
+        <div class="ac-title">我們的差異</div>
+        <div class="ac-body">從策略到執行一手包辦，自研輿情系統與 SaaS 廣告監控平台，讓數據不再是黑盒子。</div>
+        <div class="ac-deco" aria-hidden="true">03</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESULTS ══ -->
+<section id="results" aria-labelledby="results-h">
+  <div class="wm" aria-hidden="true">RESULT</div>
+  <div class="s-eyebrow fi">Proven Results</div>
+  <h2 class="s-h fi d1" id="results-h">數字不說謊<br><span style="color:var(--red)">成效說話</span></h2>
+  <div class="res-layout fi d2">
+    <div class="rc hero-card">
+      <div class="rc-svc">口碑操作</div>
+      <div class="rc-big">17<em>萬</em> 按讚</div>
+      <div class="rc-label">某連鎖餐飲新店開幕，單篇 Threads 貼文 32 萬+ 瀏覽、200+ 留言，帶動當天 2 萬人潮</div>
+      <div class="rc-story">WOOSH! 啟動口碑佈局，從開幕前造勢到當天話題引爆，Threads 貼文迅速出圈，成為當週全台最熱議的餐飲事件。</div>
+    </div>
+    <div class="rc">
+      <div class="rc-svc">廣告投放</div>
+      <div class="rc-big">ROAS <em>×2.3</em></div>
+      <div class="rc-label">電商客戶 ROAS 從 3 提升至 7，同預算創造超過兩倍以上的營收回報</div>
+      <div class="rc-story">重新梳理廣告架構、受眾分層與素材策略，三個月內完成翻轉。</div>
+    </div>
+    <div class="rc">
+      <div class="rc-svc">影像製作</div>
+      <div class="rc-big"><em>百萬</em> 品質</div>
+      <div class="rc-label">協助政府標案，以低預算製作出百萬等級視覺品質，成功得標</div>
+      <div class="rc-story">規劃完整影音製作流程，在有限預算內最大化視覺張力。</div>
+    </div>
+    <div class="rc">
+      <div class="rc-svc">輿情系統</div>
+      <div class="rc-big">10<em>+</em> 危機</div>
+      <div class="rc-label">替某美妝品牌成功解除 10 則以上潛在公關危機，守護品牌形象零次失控</div>
+      <div class="rc-story">24/7 監控市場討論，負面聲音冒苗頭時即時預警，危機擴散前完成處置。</div>
+    </div>
+    <div class="rc">
+      <div class="rc-svc">SaaS 廣告監控</div>
+      <div class="rc-big"><em>數十</em> 品牌</div>
+      <div class="rc-label">導入後客戶告別每天等報表，紅綠燈示警讓新手也能即時監控廣告成效</div>
+      <div class="rc-story">自動化圖表與示警系統讓廣告狀況一目瞭然，決策速度大幅提升。</div>
+    </div>
+    <div class="rc">
+      <div class="rc-svc">社群維運</div>
+      <div class="rc-big">20<em>倍</em></div>
+      <div class="rc-label">粉絲從 200 成長至 4,000+，每月穩定產出 8–16 篇優質圖文，互動率持續維持</div>
+      <div class="rc-story">從幾乎零基礎起步，制定內容策略與月曆，持續輸出高品質貼文。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section id="services" aria-labelledby="services-h">
+  <div class="svc-head">
+    <div>
+      <div class="s-eyebrow fi">Services</div>
+      <h2 class="s-h fi d1" id="services-h">八大核心服務</h2>
+    </div>
+    <p class="svc-blurb fi d2">從一支影片到整個品牌的數位聲譽，WOOSH! 提供完整的行銷工具箱。</p>
+  </div>
+  <div class="svc-scroll fi d1" id="svcScroll" role="list">
+    <div class="sv" role="listitem">
+      <div class="sv-num" aria-hidden="true">01</div>
+      <svg class="sv-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 10 4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <div class="sv-name">Video Production</div><div class="sv-zh">影像製作</div>
+      <div class="sv-desc">品牌形象影片、廣告素材、Reels／Shorts 社群短影音全格式製作，視覺敘事讓品牌更有溫度。</div>
+      <div class="sv-result">以低預算製作出 <strong>百萬級</strong> 影音品質</div>
+    </div>
+    <div class="sv" role="listitem">
+      <div class="sv-num" aria-hidden="true">02</div>
+      <svg class="sv-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>
+      <div class="sv-name">Ad Performance</div><div class="sv-zh">廣告投放</div>
+      <div class="sv-desc">Meta、Google、TikTok 全平台代操，精準受眾定向，從素材優化到出價策略全面掌控。</div>
+      <div class="sv-result">電商 ROAS 從 3 提升至 <strong>7</strong></div>
+    </div>
+    <div class="sv" role="listitem">
+      <div class="sv-num" aria-hidden="true">03</div>
+      <svg class="sv-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg>
+      <div class="sv-name">Reputation Mgmt</div><div class="sv-zh">口碑操作</div>
+      <div class="sv-desc">論壇、社群、評測平台全方位口碑佈局，真實口碑建立、負評危機處理，品牌形象持續加分。</div>
+      <div class="sv-result">Threads 單篇 <strong>17萬</strong> 按讚</div>
+    </div>
+    <div class="sv" role="listitem">
+      <div class="sv-num" aria-hidden="true">04</div>
+      <svg class="sv-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h3M19 12h3M12 2v3M12 19v3"/><path d="M4.93 4.93 7.05 7.05M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/><circle cx="12" cy="12" r="4"/></svg>
+      <div class="sv-name">Sentiment System</div><div class="sv-zh">輿情系統</div>
+      <div class="sv-desc">24/7 全網輿情監控，關鍵字預警、聲量分析、競品比較。分模組方案，月費制彈性訂閱。</div>
+      <div class="sv-result">解除 <strong>10+</strong> 則公關危機</div>
+      <div class="sv-badge">月費訂閱制</div>
+    </div>
+    <div class="sv" role="listitem">
+      <div class="sv-num" aria-hidden="true">05</div>
+      <svg class="sv-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/><path d="m13 15 2 2 4-4"/></svg>
+      <div class="sv-name">SaaS Platform</div><div class="sv-zh">SaaS 廣告監控</div>
+      <div class="sv-desc">串接 Meta、Google Ads、GA4、LINE LAP，廣告數據圖像化，紅綠燈示警，新手也能上手。</div>
+      <div class="sv-result">數十位客戶告別 <strong>每天等報表</strong></div>
+      <div class="sv-badge">月費訂閱制</div>
+    </div>
+    <div class="sv" role="listitem">
+      <div class="sv-num" aria-hidden="true">06</div>
+      <svg class="sv-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M19 8h2M16.5 5.5l1.5-1.5"/></svg>
+      <div class="sv-name">KOL / Influencer</div><div class="sv-zh">網紅媒合</div>
+      <div class="sv-desc">完整 KOL 資料庫，精準比對受眾重疊度，從微網紅到頭部 KOL，找到最適合品牌的聲音。</div>
+    </div>
+    <div class="sv" role="listitem">
+      <div class="sv-num" aria-hidden="true">07</div>
+      <svg class="sv-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h4M7 11h8M15 8h2"/></svg>
+      <div class="sv-name">Social Operation</div><div class="sv-zh">社群維運</div>
+      <div class="sv-desc">粉絲頁月曆規劃、文案撰寫、圖文設計、互動回覆，每月穩定產出 8–16 篇優質內容。</div>
+      <div class="sv-result">粉絲從 200 成長至 <strong>4,000+</strong></div>
+    </div>
+    <div class="sv" role="listitem">
+      <div class="sv-num" aria-hidden="true">08</div>
+      <svg class="sv-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 15c0 3 2 5 2 5H8s2-2 2-5"/></svg>
+      <div class="sv-name">Media Brokerage</div><div class="sv-zh">其他媒體媒合</div>
+      <div class="sv-desc">聯播網、Podcast、電子報、直播平台等多元媒體採購與版位整合，打通線上所有觸點。</div>
+    </div>
+  </div>
+  <div class="svc-hint fi">← 左右滑動查看全部服務</div>
+</section>
+
+<!-- ══ SUBSCRIPTION ══ -->
+<section id="subscription" aria-labelledby="sub-h">
+  <div class="wm" aria-hidden="true">SUB</div>
+  <div class="s-eyebrow fi">Subscription</div>
+  <h2 class="s-h fi d1" id="sub-h">訂閱制服務<br><span style="color:var(--red)">月費，長期守護</span></h2>
+  <div class="sub-grid fi d1">
+    <div class="sub-panel">
+      <div class="sub-chip"><svg width="12" height="12" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>月費訂閱制</div>
+      <h3 class="sub-title">輿情系統</h3>
+      <div class="sub-sub">品牌在網路上說了什麼、別人怎麼看你，我們 24/7 幫你盯著。</div>
+      <div class="sub-feats">
+        <div class="sub-feat"><svg class="feat-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>全網關鍵字監控，即時預警負面聲量</div>
+        <div class="sub-feat"><svg class="feat-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>AI 熱門文章趨勢重點整理，省去人工爬文</div>
+        <div class="sub-feat"><svg class="feat-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>正 / 負面討論 TOP10 分類，快速掌握輿論溫度</div>
+        <div class="sub-feat"><svg class="feat-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>聲量時間趨勢圖，了解品牌熱度起伏</div>
+        <div class="sub-feat"><svg class="feat-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>平台聲量比較、消費者痛點分析、競品監控</div>
+        <div class="sub-feat"><svg class="feat-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>各平台熱門文章 TOP10，掌握市場焦點</div>
+      </div>
+      <div class="sub-plans">
+        <div class="sub-plan"><strong>LINE 輿情通報</strong><span class="sub-plan-tag">即時通知版</span></div>
+        <div class="sub-plan"><strong>每日輿情電子報</strong><span class="sub-plan-tag">每日摘要版</span></div>
+        <div class="sub-plan"><strong>每週 / 隔週風向電子報</strong><span class="sub-plan-tag">週度分析版</span></div>
+        <div class="sub-plan"><strong>市場輿情分析月報</strong><span class="sub-plan-tag">深度全析版</span></div>
+        <div class="sub-plan"><strong>輿情報表系統</strong><span class="sub-plan-tag">自助查詢版</span></div>
+      </div>
+      <a class="sub-cta" href="#contact">了解輿情方案報價 →</a>
+    </div>
+    <div class="sub-panel">
+      <div class="sub-chip"><svg width="12" height="12" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>月費訂閱制</div>
+      <h3 class="sub-title">SaaS 廣告監控</h3>
+      <div class="sub-sub">一個後台，看盡所有廣告數據。不用追投手，新手小白也能上手。</div>
+      <div class="sub-feats">
+        <div class="sub-feat"><svg class="feat-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>串接 Meta Ads、Google Ads、GA4、LINE LAP 一站整合</div>
+        <div class="sub-feat"><svg class="feat-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>廣告數據圖像化儀表板，告別 Excel 複製貼上</div>
+        <div class="sub-feat"><svg class="feat-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>紅綠燈示警系統，廣告好壞一眼看出</div>
+        <div class="sub-feat"><svg class="feat-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>素材分析：哪支廣告效果最好，數據說話</div>
+        <div class="sub-feat"><svg class="feat-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>TA 受眾分析，確認受眾設定是否精準</div>
+        <div class="sub-feat"><svg class="feat-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>自動化報告產出，省下投手手動拉數據的時間</div>
+      </div>
+      <div class="sub-plans">
+        <div class="sub-plan"><strong>品牌自行維運廣告</strong><span class="sub-plan-tag">想自己看懂數據</span></div>
+        <div class="sub-plan"><strong>委外廣告代操客戶</strong><span class="sub-plan-tag">想監督投放成效</span></div>
+        <div class="sub-plan"><strong>多平台廣告同步執行</strong><span class="sub-plan-tag">想整合所有數據</span></div>
+      </div>
+      <a class="sub-cta" href="#contact">了解 SaaS 方案報價 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CASES ══ -->
+<section id="cases" aria-labelledby="cases-h">
+  <div class="cases-bar fi">
+    <div>
+      <div class="s-eyebrow">Selected Works</div>
+      <h2 class="s-h fi d1" id="cases-h">精選案例</h2>
+    </div>
+    <div class="filt fi d2" role="group" aria-label="案例篩選">
+      <button class="fb on" onclick="filt('all',this)">All</button>
+      <button class="fb" onclick="filt('buzz',this)">口碑操作</button>
+      <button class="fb" onclick="filt('ad',this)">廣告投放</button>
+      <button class="fb" onclick="filt('video',this)">影像製作</button>
+      <button class="fb" onclick="filt('social',this)">社群維運</button>
+    </div>
+  </div>
+  <div class="cg fi d1">
+    <article class="cc" data-c="buzz">
+      <div class="cc-bg" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=80')" role="img" aria-label="連鎖餐飲口碑案例"></div>
+      <div class="cc-inner">
+        <span class="cc-tag">口碑操作</span>
+        <h3 class="cc-title">連鎖餐飲新店開幕<br>Threads 引爆全台話題</h3>
+        <div class="cc-reveal">精準社群口碑佈局，開幕當天引爆 2 萬人潮，Threads 單篇貼文衝上 17 萬按讚、32 萬+ 瀏覽。</div>
+        <div class="cc-kpi">2萬人潮 · 17萬按讚 · 32萬瀏覽</div>
+        <div class="cc-meta">餐飲品牌 · 口碑操作</div>
+      </div>
+      <div class="cc-arrow" aria-hidden="true">↗</div>
+    </article>
+    <article class="cc" data-c="ad">
+      <div class="cc-bg" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80')" role="img" aria-label="電商廣告投放案例"></div>
+      <div class="cc-inner">
+        <span class="cc-tag">廣告投放</span>
+        <h3 class="cc-title">電商廣告全面重整<br>ROAS 從 3 到 7</h3>
+        <div class="cc-reveal">重新梳理廣告架構、分層受眾設定與素材策略，三個月內讓 ROAS 從 3 倍跳升至 7 倍。</div>
+        <div class="cc-kpi">ROAS 3 → 7，效益 2.3 倍</div>
+        <div class="cc-meta">電商品牌 · Meta 廣告代操</div>
+      </div>
+    </article>
+    <article class="cc" data-c="video">
+      <div class="cc-bg" style="background-image:url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80')" role="img" aria-label="政府標案影像製作案例"></div>
+      <div class="cc-inner">
+        <span class="cc-tag">影像製作</span>
+        <h3 class="cc-title">政府標案影音<br>低預算百萬品質</h3>
+        <div class="cc-reveal">有限預算下規劃完整影音製作流程，呈現業界百萬等級視覺品質，協助客戶成功得標。</div>
+        <div class="cc-kpi">低預算 · 百萬級視覺</div>
+        <div class="cc-meta">政府機關 · 品牌影片</div>
+      </div>
+    </article>
+    <article class="cc" data-c="social">
+      <div class="cc-bg" style="background-image:url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80')" role="img" aria-label="社群維運成長案例"></div>
+      <div class="cc-inner">
+        <span class="cc-tag">社群維運</span>
+        <h3 class="cc-title">從 200 粉到 4,000+<br>20 倍成長</h3>
+        <div class="cc-reveal">制定內容策略與月曆，每月穩定輸出 8–16 篇優質圖文，粉絲數成長 20 倍。</div>
+        <div class="cc-kpi">粉絲成長 20 倍 · 月產 8–16 篇</div>
+        <div class="cc-meta">品牌客戶 · 社群維運</div>
+      </div>
+    </article>
+    <article class="cc" data-c="buzz">
+      <div class="cc-bg" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80')" role="img" aria-label="美妝品牌輿情危機處理案例"></div>
+      <div class="cc-inner">
+        <span class="cc-tag">輿情守護</span>
+        <h3 class="cc-title">美妝品牌<br>危機 10+ 次解除</h3>
+        <div class="cc-reveal">輿情系統全天候監控，在負面聲音擴散前即時預警並處置，品牌形象零次失控。</div>
+        <div class="cc-kpi">解除 10+ 則潛在危機</div>
+        <div class="cc-meta">美妝品牌 · 輿情監控</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ══ CLIENTS ══ -->
+<section id="clients" aria-labelledby="clients-h">
+  <div class="cl-head fi">
+    <div class="s-eyebrow">Our Clients</div>
+    <h2 class="s-h fi d1" id="clients-h">合作品牌 <span style="color:var(--red);font-size:.6em">300+</span></h2>
+  </div>
+  <div class="cl-track-wrap fi d1">
+    <div class="cl-row">
+      <div class="cl-inner">
+        <div class="cl-cell"><div class="cl-name">Nestlé Health Science</div></div><div class="cl-cell"><div class="cl-name">UNIQLO</div></div><div class="cl-cell"><div class="cl-name">KFC</div></div><div class="cl-cell"><div class="cl-name">ASUS</div></div><div class="cl-cell"><div class="cl-name">PlayStation</div></div><div class="cl-cell"><div class="cl-name">TIGER 虎牌</div></div><div class="cl-cell"><div class="cl-name">統一企業</div></div><div class="cl-cell"><div class="cl-name">聯華食品</div></div><div class="cl-cell"><div class="cl-name">元大投信</div></div><div class="cl-cell"><div class="cl-name">黑松</div></div><div class="cl-cell"><div class="cl-name">LALAMOVE</div></div><div class="cl-cell"><div class="cl-name">好菌家</div></div>
+        <div class="cl-cell"><div class="cl-name">Nestlé Health Science</div></div><div class="cl-cell"><div class="cl-name">UNIQLO</div></div><div class="cl-cell"><div class="cl-name">KFC</div></div><div class="cl-cell"><div class="cl-name">ASUS</div></div><div class="cl-cell"><div class="cl-name">PlayStation</div></div><div class="cl-cell"><div class="cl-name">TIGER 虎牌</div></div><div class="cl-cell"><div class="cl-name">統一企業</div></div><div class="cl-cell"><div class="cl-name">聯華食品</div></div><div class="cl-cell"><div class="cl-name">元大投信</div></div><div class="cl-cell"><div class="cl-name">黑松</div></div><div class="cl-cell"><div class="cl-name">LALAMOVE</div></div><div class="cl-cell"><div class="cl-name">好菌家</div></div>
+      </div>
+    </div>
+    <div class="cl-row rev" style="margin-top:1px">
+      <div class="cl-inner">
+        <div class="cl-cell"><div class="cl-name">Chocola BB</div></div><div class="cl-cell"><div class="cl-name">黑松生技 H+</div></div><div class="cl-cell"><div class="cl-name">UNT</div></div><div class="cl-cell"><div class="cl-name">QUAKER 桂格</div></div><div class="cl-cell"><div class="cl-name">Gamania 遊戲橘子</div></div><div class="cl-cell"><div class="cl-name">MeMe LIVE</div></div><div class="cl-cell"><div class="cl-name">WorkLink</div></div><div class="cl-cell"><div class="cl-name">本研專科</div></div><div class="cl-cell"><div class="cl-name">2F Second Floor</div></div><div class="cl-cell"><div class="cl-name">HEALSCON</div></div><div class="cl-cell"><div class="cl-name">威瑪舒培</div></div><div class="cl-cell"><div class="cl-name">Eisai</div></div>
+        <div class="cl-cell"><div class="cl-name">Chocola BB</div></div><div class="cl-cell"><div class="cl-name">黑松生技 H+</div></div><div class="cl-cell"><div class="cl-name">UNT</div></div><div class="cl-cell"><div class="cl-name">QUAKER 桂格</div></div><div class="cl-cell"><div class="cl-name">Gamania 遊戲橘子</div></div><div class="cl-cell"><div class="cl-name">MeMe LIVE</div></div><div class="cl-cell"><div class="cl-name">WorkLink</div></div><div class="cl-cell"><div class="cl-name">本研專科</div></div><div class="cl-cell"><div class="cl-name">2F Second Floor</div></div><div class="cl-cell"><div class="cl-name">HEALSCON</div></div><div class="cl-cell"><div class="cl-name">威瑪舒培</div></div><div class="cl-cell"><div class="cl-name">Eisai</div></div>
+      </div>
+    </div>
+  </div>
+  <p class="cl-note fi d2">* 部分客戶因保密協議不公開完整名稱</p>
+</section>
+
+<!-- ══ SOCIAL ══ -->
+<section id="social" aria-labelledby="social-h">
+  <div class="social-bar fi">
+    <div>
+      <div class="s-eyebrow">Facebook</div>
+      <h2 class="s-h fi d1" id="social-h">社群動態</h2>
+    </div>
+    <a class="fb-btn fi d2" href="https://www.facebook.com/wooshselect" target="_blank" rel="noopener noreferrer" aria-label="前往 WOOSH! Facebook 粉絲頁">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      @wooshselect
+    </a>
+  </div>
+  <div class="soc-grid fi d1">
+    <div class="fbp" onclick="window.open('https://www.facebook.com/wooshselect','_blank')" role="button" tabindex="0" aria-label="查看 Facebook 貼文">
+      <div class="fbp-thumb" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80')" role="img" aria-label="餐飲品牌口碑案例貼文"></div>
+      <div class="fbp-tint" aria-hidden="true"></div>
+      <div class="fbp-meta"><div class="fbp-date">口碑操作</div><div class="fbp-text">開幕當天 2 萬人潮！Threads 單篇 17 萬按讚，這就是 WOOSH! 的口碑爆發力...</div></div>
+    </div>
+    <div class="fbp" onclick="window.open('https://www.facebook.com/wooshselect','_blank')" role="button" tabindex="0" aria-label="查看 Facebook 貼文">
+      <div class="fbp-thumb" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80')" role="img" aria-label="廣告投放成效貼文"></div>
+      <div class="fbp-tint" aria-hidden="true"></div>
+      <div class="fbp-meta"><div class="fbp-date">廣告投放</div><div class="fbp-text">電商客戶 ROAS 從 3 衝上 7！同樣預算，多了 2.3 倍的回報...</div></div>
+    </div>
+    <div class="fbp" onclick="window.open('https://www.facebook.com/wooshselect','_blank')" role="button" tabindex="0" aria-label="查看 Facebook 貼文">
+      <div class="fbp-thumb" style="background-image:url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&q=80')" role="img" aria-label="SaaS 廣告監控平台貼文"></div>
+      <div class="fbp-tint" aria-hidden="true"></div>
+      <div class="fbp-meta"><div class="fbp-date">SaaS 平台</div><div class="fbp-text">串接 Meta、Google、LINE LAP，廣告數據一目瞭然不用等報表...</div></div>
+    </div>
+  </div>
+  <div class="soc-cta fi d2">
+    <div class="soc-page">
+      <div class="soc-ava" aria-hidden="true">W!</div>
+      <div><div class="soc-pn">WOOSH! SELECT</div><div class="soc-ph">facebook.com/wooshselect</div></div>
+    </div>
+    <a class="btn-fill" href="https://www.facebook.com/wooshselect" target="_blank" rel="noopener noreferrer">追蹤粉絲專頁 →</a>
+  </div>
+  <p class="soc-note fi d2">以上為示意排版；實際可串接 Facebook Graph API 自動同步最新貼文。</p>
+</section>
+
+<!-- ══ PROCESS (紅底) ══ -->
+<section id="process" aria-labelledby="process-h">
+  <div class="wm" aria-hidden="true">GO</div>
+  <div class="s-eyebrow fi" style="color:rgba(0,0,0,.5)">How We Work</div>
+  <h2 class="s-h fi d1" id="process-h" style="color:#000">合作流程</h2>
+  <div class="proc-steps">
+    <div class="ps fi d1"><div class="ps-n" aria-hidden="true">01</div><h3 class="ps-t">免費品牌健檢</h3><p class="ps-d">填表後 24 小時內回覆，深入了解品牌現況與痛點，提供免費診斷報告，完全無需簽約。</p></div>
+    <div class="ps fi d2"><div class="ps-n" aria-hidden="true">02</div><h3 class="ps-t">策略規劃</h3><p class="ps-d">整合最適合的服務組合，制定精準執行藍圖與可量化 KPI，確認雙方期待一致。</p></div>
+    <div class="ps fi d3"><div class="ps-n" aria-hidden="true">03</div><h3 class="ps-t">全力執行</h3><p class="ps-d">專業團隊分工落地，從影像製作到廣告上線，每一個環節都符合 WOOSH! 的品質標準。</p></div>
+    <div class="ps fi d4"><div class="ps-n" aria-hidden="true">04</div><h3 class="ps-t">數據優化</h3><p class="ps-d">即時追蹤成效數據，定期透明報告，持續 A/B 測試與優化，讓每一分預算發揮最大價值。</p></div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact" aria-labelledby="contact-h">
+  <div class="c-hook fi">
+    <div class="c-hook-l">
+      <svg class="c-hook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20z"/><path d="M12 8v4l3 3"/></svg>
+      <div>
+        <div class="c-hook-text">🎁 填表送免費品牌健檢</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.35);margin-top:.2rem">告訴我們您的挑戰，我們 24 小時內提供診斷報告</div>
+      </div>
+    </div>
+    <div class="c-hook-badge">完全免費 · 無需簽約</div>
+  </div>
+  <div class="cg2">
+    <div class="fi">
+      <div class="s-eyebrow">Contact Us</div>
+      <h2 class="s-h fi d1" id="contact-h">準備好說<br><span style="color:var(--red)">WOOSH!</span><br>了嗎？</h2>
+      <p class="c-pitch">不管是流量、口碑還是品牌形象，WOOSH! 都能用最速配的方案讓行銷夢想起飛。填表後 24 小時內回覆，免費提供品牌健檢報告。</p>
+      <address style="font-style:normal">
+        <div class="ci-row"><span class="ci-key">Facebook</span><span class="ci-val"><a href="https://www.facebook.com/wooshselect" target="_blank" rel="noopener noreferrer">facebook.com/wooshselect</a></span></div>
+        <div class="ci-row"><span class="ci-key">成立</span><span class="ci-val">2015 年 · 深耕數位行銷 9 年</span></div>
+        <div class="ci-row"><span class="ci-key">服務</span><span class="ci-val">影像 · 廣告 · 口碑 · 網紅 · SaaS · 輿情</span></div>
+        <div class="ci-row"><span class="ci-key">服務地區</span><span class="ci-val">台灣全島 · 大中華區</span></div>
+      </address>
+    </div>
+    <div class="fi d2">
+      <form class="cform" onsubmit="handleSend(event)" novalidate>
+        <div class="fr2">
+          <div class="fr"><label class="fl" for="f-name">您的姓名</label><input id="f-name" type="text" name="name" placeholder="王小明" required autocomplete="name"></div>
+          <div class="fr"><label class="fl" for="f-email">聯絡信箱</label><input id="f-email" type="email" name="email" placeholder="hello@brand.com" required autocomplete="email"></div>
+        </div>
+        <div class="fr2">
+          <div class="fr"><label class="fl" for="f-brand">品牌 / 公司名稱</label><input id="f-brand" type="text" name="brand" placeholder="您的品牌" autocomplete="organization"></div>
+          <div class="fr"><label class="fl" for="f-phone">聯絡電話 / LINE</label><input id="f-phone" type="tel" name="phone" placeholder="0912-345-678" autocomplete="tel"></div>
+        </div>
+        <div class="fr"><label class="fl" for="f-service">感興趣的服務</label><input id="f-service" type="text" name="service" placeholder="影像製作、廣告投放、口碑操作、輿情系統、SaaS..."></div>
+        <div class="fr"><label class="fl" for="f-msg">目前最大的行銷挑戰</label><textarea id="f-msg" name="message" rows="4" placeholder="例如：流量不夠、品牌知名度低、廣告燒錢沒效果..."></textarea></div>
+        <button type="submit" class="csub" id="submitBtn"><span>送出 · 索取免費品牌健檢</span><span>→</span></button>
+        <div class="csub-note">
+          <svg class="note-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          送出後 24 小時內由專人回覆，提供免費品牌健檢初步報告
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="f-logo"><a href="#hero" aria-label="回到頂部"><img src="/favicon.png" alt="WOOSH! SELECT" width="28" height="28"></a></div>
+  <div class="f-copy">© 2015–2025 WOOSH! SELECT · 數位媒體整合行銷</div>
+  <nav class="f-links" aria-label="頁尾導覽">
+    <a href="https://www.facebook.com/wooshselect" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href="#services">服務</a>
+    <a href="#subscription">訂閱制</a>
+    <a href="#contact">聯絡</a>
+  </nav>
+</footer>
+
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂部">↑</button>
+
+<script>
+// ── 漢堡選單 ──
+const burger=document.getElementById('burger');
+const drawer=document.getElementById('drawer');
+function openDrawer(){
+  drawer.style.display='flex';
+  requestAnimationFrame(()=>drawer.classList.add('open'));
+  burger.classList.add('open');
+  burger.setAttribute('aria-expanded','true');
+  document.body.style.overflow='hidden';
+}
+function closeDrawer(){
+  drawer.classList.remove('open');
+  burger.classList.remove('open');
+  burger.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+  setTimeout(()=>{if(!drawer.classList.contains('open'))drawer.style.display='none'},300);
+}
+burger.addEventListener('click',()=>burger.classList.contains('open')?closeDrawer():openDrawer());
+drawer.querySelectorAll('.drawer-link').forEach(a=>a.addEventListener('click',closeDrawer));
+drawer.addEventListener('click',e=>{if(e.target===drawer)closeDrawer()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});
+
+// ── 自訂游標 (desktop) ──
+if(window.matchMedia('(hover:hover)').matches){
+  const curEl=document.getElementById('cur'),ring=document.getElementById('curRing');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+  (function t(){
+    curEl.style.left=mx+'px';curEl.style.top=my+'px';
+    rx+=(mx-rx)*.1;ry+=(my-ry)*.1;
+    ring.style.left=rx+'px';ring.style.top=ry+'px';
+    requestAnimationFrame(t);
+  })();
+  document.querySelectorAll('a,button,.cc,.fbp,.about-card,.sv,.rc,.cl-cell,.sub-panel').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{ring.style.width='56px';ring.style.height='56px';ring.style.borderColor='rgba(200,24,31,.7)'});
+    el.addEventListener('mouseleave',()=>{ring.style.width='36px';ring.style.height='36px';ring.style.borderColor='rgba(200,24,31,.5)'});
+  });
+}
+
+// ── Scroll reveal ──
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v')})},{threshold:.07});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+
+// ── Back to top ──
+window.addEventListener('scroll',()=>document.getElementById('btt').classList.toggle('show',scrollY>600));
+
+// ── Case filter ──
+function filt(cat,btn){
+  document.querySelectorAll('.fb').forEach(b=>{b.classList.remove('on');b.setAttribute('aria-pressed','false')});
+  btn.classList.add('on');btn.setAttribute('aria-pressed','true');
+  document.querySelectorAll('.cc').forEach(c=>{
+    const show=cat==='all'||c.dataset.c===cat;
+    c.style.opacity=show?'1':'0.1';
+    c.style.transform=show?'scale(1)':'scale(0.97)';
+    c.style.transition='opacity .4s,transform .4s';
+  });
+}
+
+// ── Service scroll drag (desktop) ──
+const svcEl=document.getElementById('svcScroll');
+if(svcEl){
+  let isDown=false,startX,sl;
+  svcEl.addEventListener('mousedown',e=>{isDown=true;startX=e.pageX-svcEl.offsetLeft;sl=svcEl.scrollLeft});
+  svcEl.addEventListener('mouseleave',()=>isDown=false);
+  svcEl.addEventListener('mouseup',()=>isDown=false);
+  svcEl.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();const x=e.pageX-svcEl.offsetLeft;svcEl.scrollLeft=sl-(x-startX)*1.2});
+}
+
+// ── Form submit ──
+function handleSend(e){
+  e.preventDefault();
+  const btn=document.getElementById('submitBtn');
+  btn.innerHTML='<span>✓ 已收到！24 小時內專人聯繫</span><span></span>';
+  btn.style.background='#1a1a1a';
+  btn.disabled=true;
+}
+</script>
+</body>
+</html>
